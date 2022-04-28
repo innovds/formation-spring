@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.nor</groupId>
-	<artifactId>simple-crud-h2</artifactId>
+		<artifactId>simple-crud-h2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>simple-crud-h2</name>
 	<description>Demo project for Spring Boot</description>
