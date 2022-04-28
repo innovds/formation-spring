@@ -1,0 +1,15 @@
+**/node_modules
+**/.mvn
+**/.settings
+**/target
+**/.classpath
+**/.project
+**/mvn
+**/mvnw.cmd
+**/mvnw
+**/bin
+### IntelliJ IDEA ###
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
