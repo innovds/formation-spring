@@ -1,8 +1,8 @@
 # les commandes git :
 ##  initialiser les donnees pesonnels
 ````git
-git config --global user.name "innovds"
-git config --global user.email innov.ds@gmail.com
+git config --global user.name "mon nom"
+git config --global user.email mon_email@gmail.com
 ````
 ## verifier:
 ````
