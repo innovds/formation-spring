@@ -2,12 +2,11 @@ import axios from 'axios'
 import type { NextPage } from 'next'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import Remove from '../components/Remove'
 import styles from '../styles/Home.module.css'
+import { t0, Task } from '../utils/Types'
 const url = 'http://localhost:261/tasks'
-interface Task{
-  id:number;
-	taskName:string;
-}
+
 //************************************* */
 const loadData = async () => {
   const { data } = await axios.get(url)
@@ -16,7 +15,7 @@ const loadData = async () => {
       props: { row: data as Task[] },
   }
 }
-const t0:Task={id:-1,taskName:''}
+
 
 export const getStaticProps = loadData
 const Home: NextPage = (props:any) => {
@@ -46,15 +45,7 @@ const save = (data: Task) => {
       }, 1000)
   })
 }
-const remove = (data: Task) => {
-  if (confirm('do you want delete line number =' + data.id + ' ?'))
-      axios.delete(url + '/' + data.id).then(() => {
-          setTimeout(() => {
-              reload()
-          }, 500)
-      })
-  // console.log(data)
-}
+
   return (
     <div>
     <h1>EXEMPLE CRUD</h1>  
@@ -100,15 +91,7 @@ const remove = (data: Task) => {
                                 </button>
                             </td>
                             <td>
-                            <form onSubmit={handleSubmit(remove)}>
-                <input
-                    type="hidden"
-                    className={styles.input}
-                    name={'id'}
-                    value={p.id}
-                />
-                <input type="submit" className={styles.submit} value="del" />
-            </form>
+                           <Remove refresh={reload} task={p} url={url} />
                             </td>
                         </tr>
                     ))}{' '}

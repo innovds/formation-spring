@@ -1,4 +1,4 @@
-# Configuration in application.properties file ****** :
+# Configuration in application.properties file :
 ## H2 :
 ```
 spring.datasource.url=jdbc:h2:mem:mydata
