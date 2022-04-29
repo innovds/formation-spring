@@ -104,7 +104,8 @@ const remove = (data: Task) => {
                 <input
                     type="hidden"
                     className={styles.input}
-                    {...register('id')}
+                    name={'id'}
+                    value={p.id}
                 />
                 <input type="submit" className={styles.submit} value="del" />
             </form>
