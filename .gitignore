@@ -9,6 +9,7 @@
 **/mvnw.cmd
 **/mvnw
 **/bin
+**/.gitignore
 ### IntelliJ IDEA ###
 **/.idea
 **/*.iws
